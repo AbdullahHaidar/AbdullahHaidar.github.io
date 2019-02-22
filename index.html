@@ -1,11 +1,15 @@
 <html>
 <head>
 <title>Hello 8</title>
+<meta name="google-signin-client_id" content="363692086573-tih9cfildp6st16rrgreqc7ad6cmf6nf.apps.googleusercontent.com">
   <link rel="shortcut icon" type="image/x-icon" href="images/ah.ico" />
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </head>
 <body>
 <h1>hello</h1>
 <h2>I'm Abdullah Haidar jjkkkk</h2>
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
 
 <script>
 function loadFile(filePath) {
@@ -21,6 +25,8 @@ function loadFile(filePath) {
 document.write("Hello World!");
 var xx=loadFile("test.txt");
 document.write(xx);
+
+
 </script>
 </body>
 </html>
