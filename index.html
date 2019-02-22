@@ -10,7 +10,7 @@
 <h1>hello</h1>
 <h2>I'm Abdullah Haidar jjkkkk</h2>
 <div style="height:200px;width:200px" class="g-signin2" ></div>
-
+<a href="#" onclick="signOut();">Sign out</a>
 <script>
 function loadFile(filePath) {
   var result = null;
@@ -25,6 +25,20 @@ function loadFile(filePath) {
 document.write("Hello World!");
 var xx=loadFile("test.txt");
 document.write(xx);
+
+
+
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+
+var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+
 
 </script>
 </body>
