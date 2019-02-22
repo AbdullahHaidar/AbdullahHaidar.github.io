@@ -9,7 +9,7 @@
 <body>
 <h1>hello</h1>
 <h2>I'm Abdullah Haidar jjkkkk</h2>
-<div style="height:500px;width:200px" class="g-signin2" data-onsuccess="onSignIn"></div>
+<div style="height:200px;width:200px" class="g-signin2" data-onsuccess="onSignIn"></div>
 
 <script>
 function loadFile(filePath) {
@@ -25,6 +25,13 @@ function loadFile(filePath) {
 document.write("Hello World!");
 var xx=loadFile("test.txt");
 document.write(xx);
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  //console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  document.write('Name: ' + profile.getName());
+  document.write('Image URL: ' + profile.getImageUrl());
+  document.write('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
 
 
 </script>
