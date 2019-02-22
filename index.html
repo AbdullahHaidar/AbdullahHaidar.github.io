@@ -1,43 +1,14 @@
 <html>
 <head>
 <title>Hello 8</title>
-<meta name="google-signin-client_id" content="363692086573-tih9cfildp6st16rrgreqc7ad6cmf6nf.apps.googleusercontent.com">
-  <link rel="shortcut icon" type="image/x-icon" href="images/ah.ico" />
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+ 
 
 </head>
 <body>
 <h1>hello</h1>
 <h2>I'm Abdullah Haidar jjkkkk</h2>
-<div style="height:200px;width:200px" class="g-signin2" ></div>
-<a href="#" onclick="signOut();">Sign out</a>
-<script>
-function loadFile(filePath) {
-  var result = null;
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", filePath, false);
-  xmlhttp.send();
-  if (xmlhttp.status==200) {
-    result = xmlhttp.responseText;
-  }
-  return result;
-}
-document.write("Hello World!");
-var xx=loadFile("test.txt");
-document.write(xx);
 
-
-
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-
-
-
-
-</script>
 </body>
 </html>
