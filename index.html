@@ -6,8 +6,20 @@
 <body>
 <h1>hello</h1>
 <h2>I'm Abdullah Haidar jjkkkk</h2>
+
 <script>
+function loadFile(filePath) {
+  var result = null;
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", filePath, false);
+  xmlhttp.send();
+  if (xmlhttp.status==200) {
+    result = xmlhttp.responseText;
+  }
+  return result;
+}
 document.write("Hello World!");
+var xx=loadFile("test.txt");
 </script>
 </body>
 </html>
