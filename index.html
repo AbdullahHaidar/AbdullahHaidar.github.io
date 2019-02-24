@@ -19,11 +19,24 @@
 	align: center;
 	color: black;
     outline-width: 0;
+    -moz-appearance:none;
 	height:40px;
 	width:100%;
 	border:none;
      cursor: pointer;
 	 }
+   .select2{
+       font-family: Sans-serif;
+   	font-size: 25px;
+   	align: center;
+
+       outline-width: 0;
+       -moz-appearance:none;
+   	height:60px;
+   	width:100%;
+   	border:none;
+        cursor: pointer;
+   	 }
 
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -131,21 +144,22 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <h3 class="w3-padding-16 w3-text-light-grey">My Academic Acheivements</h3>
   <center>
    <table style="font-size:15px" width="90%"><tr><td  align="center">
-   Select a year : </td><td><select onChange="grade();" id="selectGrade" class=" select1 " style="-moz-appearance:none" >
 	<option value='1' selected="selected">Computer Science third year</option>
 	<option value='2'>Computer Science second year</option>
 	<option value='3'>Engineering second year</option>
 	<option value='4'>Engineering first year</option>
-	</select>  </td><td> <a href="AbdullahHaidar.pdf" download>
-    <button class="w3-button w3-light-grey w3-padding-large w3-section " style="font-size:15px; width:100%;height:40px;bottom-padding:10px;">
+	</select>  </td><td>
+    <!--<a href="AbdullahHaidar.pdf" download>-->
+    <button onClick='alert("The certificates will be available very soon");' class="w3-button w3-light-grey w3-padding-large w3-section " style="font-size:15px; width:100%;height:40px;bottom-padding:10px;">
 
       <i class="fa fa-download" ></i> Download Certificate
     </button>
-    </a>
+  <!--  </a>-->
 	</td></tr>
-	</table>
-	<center>
-  <br><br>
+	</table>  <br>
+  <div id='note'></div>
+
+
   <!-- Grid for grades tables -->
     <div class="w3-row-padding" style="margin:0 -16px">
       <div  style="font-size:17px; color:white" class="w3-half w3-margin-bottom">
@@ -159,44 +173,35 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
     <!-- End Grid/Pricing tables -->
     </div>
-
+</center>
 
   <!-- Projects Section -->
   <div class="w3-padding-64 w3-content" id="photos">
     <h2 class="w3-text-light-grey">My Projects</h2>
     <hr style="width:200px" class="w3-opacity">
 
-    <select class="w3-input w3-padding-16" >
+    <select class=" select2" id='select2' onchange="project();" >
 	<option disabled >Beginner Projects</option>
-	<option>&nbsp;Agile Project Manager</option>
-    <option>&nbsp;SAMBA Server Configuration</option>
-	<option>&nbsp;Supermarket Management System</option>
+	<option value='1'>&nbsp;Agile Project Manager</option>
+	<option  value='3'>&nbsp;Supermarket Management System</option>
+  <option  value='2'>&nbsp;SAMBA Server Configuration</option>
 	</select>
-	<p>This  project  is  intended  to  help  coaches  in  the
-       management of their teams work. It allows them to
-       generate  surveys  about  certain  topics  they  are
-       concerned about and possibly have great benefit for
-       the overall working process.
+	<p id='para1'>
 	   </p>
+     <p id='para2'>
+        </p>
 	   <center>
-	  <a href="AbdullahHaidar_Agile_Report.pdf" download>
+	  <a id="report" href="AbdullahHaidar_Agile_Report.pdf" download>
     <button class="w3-button w3-light-grey w3-padding-large w3-section">
       <i class="fa fa-download"></i> Download Report
     </button>
     </a>&nbsp;&nbsp;&nbsp;&nbsp;
-	  <a href="AbdullahHaidar.pdf" download>
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download Project
-    </button>
-    </a><br><br>
-	<table>
-	<tr><td>
-	<img src="images/agile1.png" alt="boy" width="500" height="400"></td><td>
-	<img src="images/agile2.png" alt="boy" width="500" height="400"></td></tr>
-	<tr><td>
-	<img src="images/agile3.png" alt="boy" width="500" height="400"></td><td>
-	<img src="images/agile4.png" alt="boy" width="500" height="400"></td></tr>
-	</table>
+    <span id="dwn">
+
+  </span><br><br>
+    <div id="tble">
+
+</div>
 </center>
 
   <!-- End Portfolio Section -->
@@ -212,31 +217,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +961 76 170 995</p>
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: theahmaster7@gmail.com</p>
     </div><br>
-    <p>Lets get in touch. Send me a message:</p>
 
-
-      <p><input disabled class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input disabled class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit" onClick="send();">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
 
 
   <!-- End Contact Section -->
   </div>
-
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
+  <!--  <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <a href="https://www.facebook.com/abdullah.haydar.165">
+    <i class="fa fa-facebook-official w3-hover-opacity" "></i></a>&nbsp;&nbsp;&nbsp;
+      <a href="https://www.linkedin.com/in/abdullah-haidar">
+    <i class="fa fa-linkedin w3-hover-opacity"></i></a>
     <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
   <!-- End footer -->
   </footer>
@@ -247,9 +242,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </body>
 <script>
 grade();
-function send(){
- window.open('mailto:test@example.com?subject="+subject&body=body');
-}
+project();
 function grade(){
 var e = document.getElementById("selectGrade");
 var x= e.options[e.selectedIndex].value;
@@ -404,8 +397,71 @@ y.innerHTML=ESecond;
 y1.innerHTML=ESecond1;
 return;
 }
+}
 
+function project(){
+var e = document.getElementById("select2");
+var x= e.options[e.selectedIndex].value;
+var y= document.getElementById("para1");
+var y1= document.getElementById("para2");
+if(x=='2'){
+p="The goal of this project to install and completely deploy the SAMBA server. It includes users authentication, <br>";
+p+="file sharing , log management, and using SAMBA for backup.<br>";
+p1="A lot of emphasis has been placed on peaceful coexistence between UNIX and Windows. Unfortunately the two systems ";
+p1+="come from very different cultures and they have difficulty getting along without mediation. ...and that, of course";
+p1+=" getting along without mediation. ...and that, of course, is Samba's job. Samba runs on UNIX platforms, but speaks ";
+p1+="to Windows clients like a native. It allows a UNIX system to move into a Windows Network Neighborhood  without ";
+p1+="causing a stir. Windows users can happily access file and print services without knowing or caring that those ";
+p1+="services are being offered by a UNIX host. Samba is an important component to seamlessly integrate Linux/Unix ";
+p1+=" Servers and Desktops into Active Directory environments. It can function both as a domain controller and as a ";
+p1+=" regular domain member. "
+y.innerHTML=p;
+y1.innerHTML=p1;
+document.getElementById("tble").innerHTML = "<br>";
+document.getElementById("dwn").innerHTML = " ";
+document.getElementById("report").href="AbdullahHaidar_SAMBA_Report.pdf";
+return;
+}
+if(x=='1'){
+p="This  project  is  intended  to  help  coaches  in  the management of their teams work. It allows them to";
+p+="generate  surveys  about  certain  topics  they  are concerned about and possibly have great benefit for";
+p+="the overall working process.";
+p1="The website use html5, css, and PHP and was made using Laravel framework.<br>The database is implemented  ";
+p1+="in MySQL. The jpgrah package is used to represent the statistics in a radar graph";
+y.innerHTML=p;
+y1.innerHTML=p1;
+gg=document.getElementById("tble");
+g="<table>";
+g+="<tr><td><img src='images/agile1.png' width='500' height='400'></td>";
+g+="<td><img src='images/agile2.png' width='500' height='400'></td></tr>";
+g+="<tr><td><img src='images/agile3.png' width='500' height='400'></td>";
+g+="<td><img src='images/agile4.png' width='500' height='400'></td></tr></table>";
+gg.innerHTML=g;
+document.getElementById("dwn").innerHTML = "<a href='AbdullahHaidar_Agile.zip' download><button class='w3-button w3-light-grey w3-padding-large w3-section'><i class='fa fa-download'></i> Download Project </button></a>";
+document.getElementById("report").href="AbdullahHaidar_Agile_Report.pdf";
 
+return;
+}
+if(x=='3'){
+p="This project deals with Super-Market automation. A Supermarket is a self-service store offering a wide variety ";
+p+="of items related to food, household or daily use. Includes both purchase and sale of products. Designed to make the ";
+p+="existing system more informative, reliable, fast and easy for all the stake-holders.  ";
+p1="The database system is implemented according to Microsoft SQL server. The Graphical user interface was designed <br> ";
+p1+="using JavaFx.";
+y.innerHTML=p;
+y1.innerHTML=p1;
+gg=document.getElementById("tble");
+g="<table>";
+g+="<tr><td><img src='images/sup1.png' width='500' height='400'></td>";
+g+="<td><img src='images/sup2.png' width='500' height='400'></td></tr>";
+g+="<tr><td><img src='images/sup3.png' width='500' height='400'></td>";
+g+="<td><img src='images/sup4.png' width='500' height='400'></td></tr></table>";
+gg.innerHTML=g;
+document.getElementById("dwn").innerHTML = "<a href='Supermarket.zip' download><button class='w3-button w3-light-grey w3-padding-large w3-section'><i class='fa fa-download'></i> Download Project </button></a>";
+document.getElementById("report").href="AbdullahHaidar_Supermarket_Report.pdf";
+document.getElementById("project").href="AbdullahHaidar_Supermarket_Report.pdf";
+return;
+}
 }
 </script>
 </html>
