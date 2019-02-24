@@ -22,8 +22,8 @@
 	height:40px;
 	width:100%;
 	border:none;
-  
-  }
+     cursor: pointer;
+	 }
 
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
@@ -64,7 +64,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">Projects</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
 </div>
@@ -130,12 +130,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <br><br>
   <h3 class="w3-padding-16 w3-text-light-grey">My Academic Acheivements</h3>
   <center>
-   <table style="font-size:15px" width="90%"><tr><td  align="right">
-   Select a year :&nbsp;&nbsp; </td><td><select class=" select1 " style="-moz-appearance:none" >
-	<option>Computer Science third year</option>
-	<option>Computer Science second year</option>
-	<option>Engineering second year</option>
-	<option>Engineering first year</option>
+   <table style="font-size:15px" width="90%"><tr><td  align="center">
+   Select a year : </td><td><select onChange="grade();" id="selectGrade" class=" select1 " style="-moz-appearance:none" >
+	<option value='1'>Computer Science third year</option>
+	<option value='2'>Computer Science second year</option>
+	<option value='3'>Engineering second year</option>
+	<option value='4'>Engineering first year</option>
 	</select>  </td><td> <a href="AbdullahHaidar.pdf" download>
     <button class="w3-button w3-light-grey w3-padding-large w3-section " style="font-size:15px; width:100%;height:40px;bottom-padding:10px;">
   
@@ -148,8 +148,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <br><br>
   <!-- Grid for grades tables -->
     <div class="w3-row-padding" style="margin:0 -16px">
-      <div style="font-size:17px; color:white" class="w3-half w3-margin-bottom">
-        <ul class="w3-ul  w3-center w3-opacity ">
+      <div  style="font-size:17px; color:white" class="w3-half w3-margin-bottom">
+        <ul id='first' class="w3-ul  w3-center w3-opacity ">
           <li class="w3-dark-grey w3-xlarge w3-padding-32">Course</li>
           <li class="w3-padding-16">PHP</li>
           <li class="w3-padding-16">Database 2</li>
@@ -164,7 +164,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
 
       <div class="w3-half" style="font-size:17px; color:white" >
-        <ul class="w3-ul  w3-center w3-opacity ">
+        <ul id='second' class="w3-ul  w3-center w3-opacity ">
            <li class="w3-dark-grey w3-xlarge w3-padding-32">Grade</li>
           <li class="w3-padding-16">95</li>
           <li class="w3-padding-16">91</li>
@@ -181,21 +181,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
   
   
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   
-  
-  <!-- Portfolio Section -->
+  <!-- Projects Section -->
   <div class="w3-padding-64 w3-content" id="photos">
     <h2 class="w3-text-light-grey">My Projects</h2>
     <hr style="width:200px" class="w3-opacity">
@@ -213,7 +199,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
        the overall working process.
 	   </p>
 	   <center>
-	  <a href="AbdullahHaidar.pdf" download>
+	  <a href="AbdullahHaidar_Agile_Report.pdf" download>
     <button class="w3-button w3-light-grey w3-padding-large w3-section">
       <i class="fa fa-download"></i> Download Report
     </button>
@@ -223,10 +209,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <i class="fa fa-download"></i> Download Project
     </button>
     </a><br><br>
-	<img src="images/agile1.png" alt="boy" width="240" height="200">
-	<img src="images/agile2.png" alt="boy" width="240" height="200">
-	<img src="images/agile3.png" alt="boy" width="240" height="200">
-	<img src="images/agile4.png" alt="boy" width="240" height="200">
+	<table>
+	<tr><td>
+	<img src="images/agile1.png" alt="boy" width="500" height="400"></td><td>
+	<img src="images/agile2.png" alt="boy" width="500" height="400"></td></tr>
+	<tr><td>
+	<img src="images/agile3.png" alt="boy" width="500" height="400"></td><td>
+	<img src="images/agile4.png" alt="boy" width="500" height="400"></td></tr>
+	</table>
 </center>
   
   <!-- End Portfolio Section -->
@@ -244,17 +234,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div><br>
     <p>Lets get in touch. Send me a message:</p>
 
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+   
+      <p><input disabled class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input disabled class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
       <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit" onClick="send();">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
-    </form>
+  
+	
   <!-- End Contact Section -->
   </div>
   
@@ -274,4 +265,122 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 
 </body>
+<script>
+function send(){
+ window.open('mailto:test@example.com?subject="+subject&body=body');
+}
+function grade(){
+var e = document.getElementById("selectGrade");
+var x= e.options[e.selectedIndex].value;
+var y= document.getElementById("first");
+var y1= document.getElementById("second");
+if(x=='2'){
+SecondYear=" <li class='w3-dark-grey w3-xlarge w3-padding-32'>Course</li>";
+SecondYear1=" <li class='w3-dark-grey w3-xlarge w3-padding-32'>Grade</li>";
+SecondYear+="<li class='w3-padding-16'>Image Processing</li>";
+SecondYear1+="<li class='w3-padding-16'>99</li>";
+SecondYear+="<li class='w3-padding-16'>Web Development</li>";
+SecondYear1+="<li class='w3-padding-16'>94</li>";
+SecondYear+="<li class='w3-padding-16'>OOP - JAVA </li>";
+SecondYear1+="<li class='w3-padding-16'>90</li>";
+SecondYear+="<li class='w3-padding-16'>Database 1</li>";
+SecondYear1+="<li class='w3-padding-16'>85</li>";
+SecondYear+="<li class='w3-padding-16'>Math for Informatics</li>";
+SecondYear1+="<li class='w3-padding-16'>85</li>";
+SecondYear+="<li class='w3-padding-16'>Computer Architecture</li>";
+SecondYear1+="<li class='w3-padding-16'>84</li>";
+SecondYear+="<li class='w3-padding-16'>Graph Theory</li>";
+SecondYear1+="<li class='w3-padding-16'>83</li>";
+SecondYear+="<li class='w3-padding-16'>Networks</li>";
+SecondYear1+="<li class='w3-padding-16'>82</li>";
+SecondYear+="<li class='w3-padding-16'>Logic Programming - Prologue</li>";
+SecondYear1+="<li class='w3-padding-16'>80</li>";
+SecondYear+="<li class='w3-padding-16'>Operating System 1</li>";
+SecondYear1+="<li class='w3-padding-16'>80</li>";
+SecondYear+="<li class='w3-padding-16'>Computer Organization</li>";
+SecondYear1+="<li class='w3-padding-16'>75</li>";
+SecondYear+="<li class='w3-padding-16'>Average</li>";
+SecondYear1+="<li class='w3-padding-16'>85</li>";
+SecondYear+="</ul>";
+SecondYear1+="</ul>";
+y.innerHTML=SecondYear;
+y1.innerHTML=SecondYear1;
+return;
+}
+if(x=='1'){
+ThirdYear=" <li class='w3-dark-grey w3-xlarge w3-padding-32'>Course</li>";
+ThirdYear1=" <li class='w3-dark-grey w3-xlarge w3-padding-32'>Grade</li>";
+ThirdYear+="<li class='w3-padding-16'>PHP</li>";
+ThirdYear1+="<li class='w3-padding-16'>95</li>";
+ThirdYear+="<li class='w3-padding-16'>Database 2</li>";
+ThirdYear1+="<li class='w3-padding-16'>91</li>";
+ThirdYear+="<li class='w3-padding-16'>Software Engineering</li>";
+ThirdYear1+="<li class='w3-padding-16'>90</li>";
+ThirdYear+="<li class='w3-padding-16'>GUI</li>";
+ThirdYear1+="<li class='w3-padding-16'>90</li>";
+ThirdYear+="<li class='w3-padding-16'>Human Rights</li>";
+ThirdYear1+="<li class='w3-padding-16'>90</li>";
+ThirdYear+="<li class='w3-padding-16'>System Administration</li>";
+ThirdYear1+="<li class='w3-padding-16'>88</li>";
+ThirdYear+="<li class='w3-padding-16'>Network Administration</li>";
+ThirdYear1+="<li class='w3-padding-16'>88</li>";
+ThirdYear+="<li class='w3-padding-16'>Operating System 2</li>";
+ThirdYear1+="<li class='w3-padding-16'>70</li>";
+ThirdYear+="<li class='w3-padding-16'>Average</li>";
+ThirdYear1+="<li class='w3-padding-16'>86</li>";
+ThirdYear+="</ul>";
+ThirdYear1+="</ul>";
+y.innerHTML=ThirdYear;
+y1.innerHTML=ThirdYear1;
+return;
+}
+
+
+if(x=='3'){
+ESecond=" <li class='w3-dark-grey w3-xlarge w3-padding-32'>Course</li>";
+ESecond1=" <li class='w3-dark-grey w3-xlarge w3-padding-32'>Grade</li>";
+ESecond+="<li class='w3-padding-16'>Industrial Drawing</li>";
+ESecond1+="<li class='w3-padding-16'>85</li>";
+ESecond+="<li class='w3-padding-16'>Differential Geometry</li>";
+ESecond1+="<li class='w3-padding-16'>84</li>";
+ESecond+="<li class='w3-padding-16'>Analysis III</li>";
+ESecond1+="<li class='w3-padding-16'>82</li>";
+ESecond+="<li class='w3-padding-16'>Mechanic Workshop</li>";
+ESecond1+="<li class='w3-padding-16'>80</li>";
+ESecond+="<li class='w3-padding-16'>Mechanics of Materials</li>";
+ESecond1+="<li class='w3-padding-16'>80</li>";
+ESecond+="<li class='w3-padding-16'>Architecture Drawing</li>";
+ESecond1+="<li class='w3-padding-16'>74</li>";
+ESecond+="<li class='w3-padding-16'>Computer Science III</li>";
+ESecond1+="<li class='w3-padding-16'>68</li>";
+ESecond+="<li class='w3-padding-16'>Mechanics II</li>";
+ESecond1+="<li class='w3-padding-16'>67</li>";
+ESecond+="<li class='w3-padding-16'>Organic Chemistry</li>";
+ESecond1+="<li class='w3-padding-16'>67</li>";
+ESecond+="<li class='w3-padding-16'>Numerical Analysis </li>";
+ESecond1+="<li class='w3-padding-16'>67</li>";
+ESecond+="<li class='w3-padding-16'>Statistics</li>";
+ESecond1+="<li class='w3-padding-16'>66</li>";
+ESecond+="<li class='w3-padding-16'>Complex Analysis </li>";
+ESecond1+="<li class='w3-padding-16'>65</li>";
+ESecond+="<li class='w3-padding-16'>Mineral Chemistry";
+ESecond1+="<li class='w3-padding-16'>64</li>";
+ESecond+="<li class='w3-padding-16'>Electricity II";
+ESecond1+="<li class='w3-padding-16'>61</li>";
+ESecond+="<li class='w3-padding-16'>Thermodynamic I";
+ESecond1+="<li class='w3-padding-16'>61</li>";
+ESecond+="<li class='w3-padding-16'>Modern Physics";
+ESecond1+="<li class='w3-padding-16'>60</li>";
+ESecond+="<li class='w3-padding-16'>Electricity III";
+ESecond1+="<li class='w3-padding-16'>60</li>";
+y.innerHTML=ESecond;
+y1.innerHTML=ESecond1;
+return;
+}
+
+
+
+
+}
+</script>
 </html>
