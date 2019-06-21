@@ -1,0 +1,40 @@
+body{
+    padding-top:20px;
+}
+.large-xx{
+font-size:45px;
+}
+.large-x{
+	font-size:25px;
+}
+.center{
+	text-align:center;
+}
+p{
+	padding-left:10px;
+    text-align:left;
+}
+
+.project{
+	    padding:20px 10px;
+        cursor: pointer; 
+        border:1px solid silver;
+		text-align:center;
+         
+       
+       
+}
+.project:hover{
+cursor: pointer;
+        -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+        -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+        box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+       
+}
+.projects-container{
+	width:95%;
+     text-align:center;
+}
+.col-lg-3{
+padding-top:20px;
+}

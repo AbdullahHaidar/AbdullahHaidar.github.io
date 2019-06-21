@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supermarket Database Management</title>   
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css" />
+<style>
+img{
+margin-bottom:80px;
+width:80%;
+
+}
+</style>
+</head>
+<body>
+<div class="center" >
+<h1 class="large-xx"> Supermarket Database Management<h1>
+<h1 class="large-x">Microsoft Sql Server 2014 Project
+</h1>
+
+<a  href="AbdullahHaidar_Agile_Report.pdf" download style="float:right;font-size:20px;margin-right:40px;">Github Directory</a>
+</div>
+<br><br>
+<div style="padding:10px 20px;">
+
+<p>
+The database contains all the data from the supermarket: customers, employees, products, stocks ,orders ….. 
+</p>
+<p>
+The sql server used is Microsoft Sql Server 
+2014, with authentication mode.
+</p> 
+<p>
+Below is a breif specification of the main features implemented in the application:
+
+<br>
+<h4> Procedures:</h4> 
+<h5> Data Procedures </h5> 
+<ol>
+<li> Procedure to add Customers.  </li>
+<li> Procedure to add Employees. </li>
+<li>Procedure to add Products. </li>
+<li>Procedure to add Orders: the addOrder procedure  only takes two arguments:
+the  Customer Id and the Order Id , the 
+Page 19 date and name of id of the employee is 
+taken from GetDate() and 
+@@CURRENT_USER.  </li>
+<li>Procedure to add an item to an order. </li>
+
+<li> Procedure to add quantity to stocks.</li> 
+</ol>
+
+<h5>Security Procedures</h5> 
+<ol>
+  <li>Procedure to create Users. </li>
+<li> Procedures to grant permissions to users.</li> 
+</ol>
+<h5>Statistics Procedures </h5>
+<ol> 
+<li>  Procedure to get the amount gained with respect to days, months, years…. </li>
+<li> Procedure to get the average of sales with respect to days, months, years….</li>  
+<li>  Procedure to get the nb of orders with respect to days, months, years </li>
+ </ol>
+<h4> Triggers: </h4>
+ 
+ <ol>
+<li> Foreign key triggers for all the tables, 
+materializing referential constraints. </li>
+<li> Trigger checkStock to make sure a 
+product is not included in an order if its 
+quantity becomes lower then the allowed 
+minimum stock quantity. </li>
+</ol>
+ <h4>Views:</h4>
+ We implement some views for security, 
+every employee has a view of his personal 
+information, and he is denied access to 
+others employees information. <br>
+We also implements some other 
+useful views:
+<ol>
+<li>
+OrdersView
+</li> 
+<li>
+)   Order_Products_ExtraInformation
+</li>
+<li> Order_Products </li>
+</ol>
+
+<h4> Security: </h4> 
+<ol>
+<li>Create logins and users for the 
+employees. </li>
+<li>  Create roles Cashier and 
+StockManager, and grant each one 
+the relevant permissions. </li>
+<li> Grant the convenient  role to 
+suitable user.</li>  
+
+
+</p>
+</div>
+</body>
+
+</html>
