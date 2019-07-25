@@ -20,7 +20,7 @@ p{
         cursor: pointer; 
         border:1px solid silver;
 	text-align:center;
-	height:600px;
+	min-height:600px;
          
        
        
