@@ -39,4 +39,8 @@ cursor: pointer;
 }
 .col-lg-3{
 padding-top:20px;
+	height:100%;
+}
+.col-lg-4{
+	height:100%;
 }
