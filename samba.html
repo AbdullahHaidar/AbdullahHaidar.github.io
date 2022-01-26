@@ -13,6 +13,19 @@ margin-bottom:80px;
 width:80%;
 
 }
+@media (max-width: 767px) {
+        .hidden-mobile{
+            display: none;
+        }
+    
+      }
+      @media (min-width: 767px) {
+        .git-link{
+            float:right;
+            margin-right: 40px;
+        }
+    
+      }
 </style>
 </head>
 <body>
@@ -20,10 +33,47 @@ width:80%;
 <h1 class="large-xx"> Samba Server Configuration<h1>
 <h1 class="large-x">Linux Project
 </h1>
-
-<a  href="AbdullahHaidar_SAMBA_Report.pdf" download style="float:right;font-size:20px;margin-right:40px;">Download Report</a>
 </div>
-<br><br>
+<div style="text-align: center;">
+    <a  href="AbdullahHaidar_SAMBA_Report.pdf" download class="git-link" style="font-size:20px;">Download Report</a>
+
+</div>
+
+<br><br class="hidden-mobile">
+
+
+<div style="padding:10px 20px;">
+
+    <p>
+
+
+A lot of emphasis has been placed on peaceful coexistence
+between UNIX and Windows. Unfortunately, the two systems
+come from very different cultures and they have difficulty
+getting along without mediation. ...and that, of course, is
+Samba's job.
+</p><p>
+    Samba runs on UNIX platforms, but speaks to
+    Windows clients like a native. It allows a UNIX system to move
+    into a Windows "Network Neighborhood" without causing a
+    stir. Windows users can happily access file and print services
+    without knowing or caring that those services are being offered
+    by a UNIX host.
+</p>
+<p>
+    Samba is an important component to seamlessly integrate
+    Linux/Unix Servers and Desktops into Active Directory
+    environments. It can function both as a domain controller and
+    as a regular domain member.
+</p> 
+
+<p>
+    In this project a Samba server was configured and deployed to allow shared courses to be accesed by students working with different opertaing systems.
+
+</p>
+
+</div>
+
 
 </body>
 
