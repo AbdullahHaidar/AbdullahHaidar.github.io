@@ -1,49 +1,64 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Traveling Salesman Problem</title>   
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Traveling Salesman Problem</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="site.css" />
-<style>
-img{
-margin-bottom:20px;
-}
-</style>
+    <style>
+        img {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
+
 <body>
-<div class="center" >
-<h1 class="large-xx">Traveling Salesman Problem<h1>
-<h1 class="large-x">Genetic Algorithm With Parallelism
-</h1>
-<a  href="https://github.com/abdullahhaidar92/Projects/tree/master/TravelingSalesManProblem"  style="float:right;font-size:20px;margin-right:40px;">Project Repository</a>
-<a  href="tsp.pptx" download style="float:right;font-size:20px;margin-right:40px;">Download Presentation</a>
-</div>
-<br><br>
-<div style="padding:10px 20px;">
+    <div class="center">
+        <h1 class="large-xx">Traveling Salesman Problem<h1>
+                <h1 class="large-x">Genetic Algorithm With Parallelism
+                </h1>
+                <a href="https://github.com/abdullahhaidar92/Projects/tree/master/TravelingSalesManProblem"
+                    style="float:right;font-size:20px;margin-right:40px;">Project Repository</a>
+                <a href="tsp.pptx" download style="float:right;font-size:20px;margin-right:40px;">Download
+                    Presentation</a>
+    </div>
+    <br><br>
+    <div style="padding:10px 20px;">
+        <br>
+        <p>
+            The aim of this project is to solve the traveling salesman problem. The travelling salesman problem (TSP)
+            asks the following question: "Given a list of cities and the distances between each pair of cities, what is
+            the shortest possible route that visits each city and returns to the origin city?" It is an NP-hard problem
+            in combinatorial optimization, important in operations research and theoretical computer science.
+        </p>
+        <p>
+            Genetic algorithms are evolutionary techniques used for optimization purposes according to survival of the
+            fittest idea. These methods do not ensure optimal solutions; however, they give good approximation usually
+            in time. The genetic algorithms are useful for NP-hard problems, especially the traveling salesman problem.
+            The genetic algorithm depends on selection criteria, crossover, and mutation operators.
+        </p>
+        <p>
+            To further optinmize the execution of the program, parallelism techniques are integrated to the serial
+            version where two main concepts are used:
+        <ol>
+            <li>
+                Distributed Memory Parallelism : The code is run on a cluster of machines where each machine generates
+                its own population and then all nodes(machines) exhange best chromsomes. The MPI (Message Passing
+                Interface) is used for the inter-communication between the nodes.
+            </li>
+            <li>
+                Shared Memory Parallelism : On every machine the execution of the code is optimized using
+                multithreading. The OpenMP is used to parallelize the code segments.
+            </li>
+        </ol>
+        </p>
+        <br>
 
-<p>
-The aim of this  project is to solve the traveling salesman problem. The travelling salesman problem (TSP) asks the following question: "Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city and returns to the origin city?" It is an NP-hard problem in combinatorial optimization, important in operations research and theoretical computer science.  
-</p><p>
-Genetic algorithms are evolutionary techniques used for optimization purposes according to survival of the fittest idea. These methods do not ensure optimal solutions; however, they give good approximation usually in time. The genetic algorithms are useful for NP-hard problems, especially the traveling salesman problem. The genetic algorithm depends on selection criteria, crossover, and mutation operators.
-</p>
-<p>
-To further optinmize the execution of the program, parallelism techniques are integrated to the serial version where two main concepts are used: 
-<ol>
-<li>
-Distributed Memory Parallelism : The code is run on a cluster of machines where each machine generates its own population and then all nodes(machines) exhange best chromsomes. The MPI (Message Passing Interface) is used for the inter-communication between the nodes.
-</li>
-<li>
-Shared Memory Parallelism : On every machine the execution of the code is optimized using multithreading. The OpenMP is used to parallelize the code segments.
-</li>
-</ol>
-</p>
-<br>
 
-
-</div>
+    </div>
 </body>
 
 </html>
