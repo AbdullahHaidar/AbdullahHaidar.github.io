@@ -1,47 +1,70 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clinic Management 1</title>   
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Clinic Management 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="site.css" />
-<style>
-img{
-margin-bottom:80px;
-width:80%;
+    <style>
+        @media (max-width: 767px) {
+            .hidden-mobile {
+                display: none;
+            }
 
-}
-</style>
+        }
+
+        @media (min-width: 767px) {
+            .git-link {
+                float: right;
+                margin-right: 40px;
+            }
+
+        }
+
+        img {
+            margin-bottom: 10rem;
+            width: 80%;
+
+        }
+    </style>
 </head>
+
 <body>
-<div class="center" >
-<h1 class="large-xx"> Clinic Management System<h1>
-<h1 class="large-x">C# /Asp.Net Core Project
-</h1>
-<a  href="https://github.com/abdullahhaidar92/Projects/tree/master/Clinic"  style="float:right;font-size:20px;margin-right:40px;">Project Repository</a>
+    <div class="center">
+        <h1 class="large-xx"> Clinic Management System<h1>
+                <h1 class="large-x">C# /Asp.Net Core Project
+                </h1>
+                <div style="text-align: center;">
+                    <a href="https://github.com/abdullahhaidar92/Projects/tree/master/Clinic" style="font-size:20px;"
+                        class="git-link">Project Repository</a>
 
-</div>
-<br><br>
-<div style="padding:10px 20px;">
+                </div>
 
-<p>
+    </div>
+    <br><br class="hidden-mobile">
+    <div style="padding:10px 20px;">
 
-A complete system for the management of a clinic.The application users include : administrator, doctors, patients, assistants and insurance companies. 
-    </p>
-    <p>The website back-end is implemented in C# using ASP.Net Core 2.2 with. 
-</p><br>
-<div class="projects-container"> 
-<img src="images/clinic/clinic1.png"  />
-<img src="images/clinic/clinic2.png"  />
-<img src="images/clinic/clinic3.png"  />
-<img src="images/clinic/clinic5.png" />
-<img src="images/clinic/clinic4.png"  />
+        <p>
 
-</div>
+            A complete system for the management of a clinic.The application users include : administrator, doctors,
+            patients, assistants and insurance companies.
+        </p>
+        <p>The website back-end is implemented in C# using ASP.Net Core 2.2 with MSSQL as database engine. The frontend
+            uses bootstrap as a css framework and jQuery for dynamic layouts and api calls.
+        </p><br>
+        <div class="projects-container">
+            <img src="images/clinic/clinic1.png" />
+            <img src="images/clinic/clinic2.png" />
+            <img src="images/clinic/clinic3.png" />
+            <img src="images/clinic/clinic5.png" />
+            <img src="images/clinic/clinic4.png" />
 
-</div>
+        </div>
+
+    </div>
 </body>
 
 </html>
