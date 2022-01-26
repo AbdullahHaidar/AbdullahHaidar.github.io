@@ -9,9 +9,24 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="site.css" />
     <style>
-        img {
-            margin-bottom: 20px;
-        }
+       @media (max-width: 767px) {
+      .hidden-mobile {
+        display: none;
+      }
+   
+
+    }
+
+    @media (min-width: 767px) {
+      .git-link {
+        float: right;
+        margin-right: 40px;
+      }
+      .hidden-large {
+        display: none;
+      }
+
+    }
     </style>
 </head>
 
@@ -20,14 +35,17 @@
         <h1 class="large-xx">Traveling Salesman Problem<h1>
                 <h1 class="large-x">Genetic Algorithm With Parallelism
                 </h1>
-                <a href="https://github.com/abdullahhaidar92/Projects/tree/master/TravelingSalesManProblem"
-                    style="float:right;font-size:20px;margin-right:40px;">Project Repository</a>
-                <a href="tsp.pptx" download style="float:right;font-size:20px;margin-right:40px;">Download
-                    Presentation</a>
+            
     </div>
-    <br><br>
+    <div style="text-align: center;">
+        <a href="https://github.com/abdullahhaidar92/Projects/tree/master/TravelingSalesManProblem"
+        class="git-link" style="font-size:20px;">Project Repository</a><br class="hidden-large">
+
+     <a href="tsp.pptx" download style="font-size:20px;" class="git-link">Download
+         Presentation</a>
+    </div>
+    <br><br class="hidden-mobile">
     <div style="padding:10px 20px;">
-        <br>
         <p>
             The aim of this project is to solve the traveling salesman problem. The travelling salesman problem (TSP)
             asks the following question: "Given a list of cities and the distances between each pair of cities, what is
@@ -41,7 +59,7 @@
             The genetic algorithm depends on selection criteria, crossover, and mutation operators.
         </p>
         <p>
-            To further optinmize the execution of the program, parallelism techniques are integrated to the serial
+            To further optimize the execution of the program, parallelism techniques are integrated to the serial
             version where two main concepts are used:
         <ol>
             <li>
